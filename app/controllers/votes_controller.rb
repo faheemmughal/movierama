@@ -3,6 +3,7 @@ class VotesController < ApplicationController
     authorize! :vote, _movie
 
     _voter.vote(_type)
+    _notify_user
     redirect_to root_path, notice: 'Vote cast'
   end
 
@@ -29,5 +30,9 @@ class VotesController < ApplicationController
 
   def _movie
     @_movie ||= Movie[params[:movie_id]]
+  end
+
+  def _notify_user
+    UserMailer.notification_email(current_user, _movie, _type).deliver
   end
 end

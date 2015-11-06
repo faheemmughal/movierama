@@ -1,9 +1,13 @@
 - name: John McFoo
+  email: bit-bucket@test.smtp.org
   uid:  'null|johnmcfoo'
 - name: Alice Wallace
+  email: bit-bucket@test.smtp.org
   uid:  'null|alice'
 - name: Bob Ablleton
+  email: bit-bucket@test.smtp.org
   uid:  'null|bob'
 - name: Charlie O'Callaghan
+  email: bit-bucket@test.smtp.org
   uid:  'null|charlie'
 
